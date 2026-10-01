@@ -10,7 +10,8 @@ import { getOwnProfile } from '../services/profiles'
 
 export function buildEmergencyUrl(publicId) {
   if (!publicId) return ''
-  return `${window.location.origin}/emergency/${publicId}`
+
+  return `${window.location.origin}${import.meta.env.BASE_URL}#/emergency/${publicId}`
 }
 
 export default function DashboardPage() {
